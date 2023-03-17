@@ -1,0 +1,180 @@
+/* INDEX */
+/* icon BS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat&display=swap");
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  position: relative;
+}
+
+.navbar,
+.offcanvas,
+.porto .nav-pills .nav-link.active,
+.contact a .bi,
+.btn-pesan {
+  background-color: #47425d;
+}
+
+.contact a .bi:hover,
+#myBtn {
+  background-color: #fabd19;
+}
+
+.navbar a,
+.offcanvas-header,
+.contact a .bi,
+.btn-pesan {
+  color: #f5f5f5;
+}
+
+.porto .nav-pills .nav-link.active,
+.navbar a:hover {
+  color: #fabd19;
+}
+
+.offcanvas .btn-close {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fabd19'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+    center/1em auto no-repeat;
+}
+
+.navbar-toggler {
+  border-color: #fabd19;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(250, 289, 25, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  margin-right: 1rem;
+}
+
+/* hero */
+.carousel-item img {
+  object-position: center;
+}
+
+.carousel-caption {
+  top: 40%;
+}
+
+.overlay-carousel {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* our-history */
+.bg-img {
+  background-image: url("../img/wasylko-studio-canon-nikon-74453-1.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  position: relative;
+}
+
+/* service */
+.service-inner {
+  background-color: #f5f5f5;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: var(--bs-border-radius) !important;
+}
+
+.service-inner i {
+  font-size: calc(1.525rem + 3.3vw);
+}
+
+/* porto */
+.porto .nav-pills .nav-link {
+  color: #000000;
+}
+
+.img-porto img {
+  margin: 0.5rem 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* footer */
+.footer {
+  border-top: #47425d;
+  border-top-style: solid;
+  border-width: 5px;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact a .bi {
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: 0.5s background-color;
+}
+
+.contact a .bi:hover {
+  text-decoration: none;
+  color: #47425d;
+}
+
+#myBtn {
+  color: #e64e4e;
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 16px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  height: 3rem;
+  width: 3rem;
+  transition: 0.5s background-color;
+}
+
+#myBtn:hover {
+  background-color: #e64e4e;
+  color: #f5f5f5;
+  border: 2px #47425d;
+}
+
+/* TRIP */
+
+/* BLOG */
+.blog-content {
+  max-width: 800px;
+}
+
+.blog-content a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* TEAM */
+.team {
+  border: none;
+}
+
+.team-img {
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
