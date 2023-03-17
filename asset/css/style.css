@@ -178,3 +178,9 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+@media (max-width: 767px) {
+  .contact {
+    width: 100%;
+  }
+}
