@@ -10,7 +10,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   margin: auto;
   position: relative;
 }
@@ -157,6 +157,9 @@ body {
 }
 
 /* TRIP */
+.btn-pesan {
+  margin-bottom: 1rem;
+}
 
 /* BLOG */
 .blog-content {
@@ -179,8 +182,198 @@ body {
   object-position: center;
 }
 
+.overlay-wrap {
+  position: relative;
+}
+
+.overlay-wrap:hover img {
+  opacity: 0.7;
+}
+
+.overlay-wrap:hover .overlay-hover {
+  opacity: 1;
+}
+
+.overlay-hover {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-hover-text a {
+  text-decoration: none;
+  background-color: #47425d;
+  color: #fabd19;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+}
+
+/* media max */
 @media (max-width: 767px) {
   .contact {
     width: 100%;
+  }
+
+  .trip img {
+    max-width: 150px;
+    margin: 0.5rem auto;
+  }
+
+  .overlay-carousel {
+    display: none;
+  }
+
+  .overlay-hover-text,
+  .overlay-hover,
+  .overlay-wrap:hover img,
+  .overlay-wrap:hover .overlay-hover {
+    display: none;
+  }
+}
+
+/* INDEX-2 */
+/* .porto-2 .carousel {
+  max-width: 500px;
+} */
+
+.mycard {
+  display: grid;
+  place-items: center;
+  /* max-width: 21.875rem; */
+  min-height: 28rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  margin-bottom: 3rem;
+}
+
+.mycard > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.3) 10%, hsl(0, 0%, 0%) 100%);
+  color: #f5f5f5;
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 300ms ease-out;
+    transition-delay: 300ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 500ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .mycard:hover,
+  .mycard:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .mycard:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .mycard:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .mycard:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .mycard:hover .card__content--container > :not(.card__title),
+  .mycard:hover .card__button,
+  .mycard:focus-within .card__content--container > :not(.card__title),
+  .mycard:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 5 00ms;
+  }
+
+  .mycard:hover .card__title::after,
+  .mycard:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
   }
 }
